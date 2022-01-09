@@ -79,10 +79,21 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'project1',
+        'USER': 'admin',
+        'PASSWORD': 'sdh961129!',
+        'HOST': 'database-1.celecxhe3x3p.us-east-1.rds.amazonaws.com',
+        'PORT': '3306',
+        'OPTIONS':{
+            'init_command': "SET sql_mode='STRICRT_TRANS_TABLES'"
+        }
     }
 }
+
+# 데이터베이스 이름: project1
+# 비밀번호: sdh961129!
+# host = endpoint
 
 
 # Password validation
